@@ -1,0 +1,196 @@
+:root{
+  /* Colors */
+
+  /* Primary */
+  --clr-moderateViolet: 263, 55%, 52%;
+  --clr-veryDarkGrayishBlue: 217, 19%, 35%;
+  --clr-veryDarkBlackishBlue: 219, 29%, 14%;
+
+  /* Neutral */
+  --clr-lightGray: 0, 0%, 81%;
+  --clr-lightGrayishBlue: 210, 46%, 95%;
+
+  /* Typography */
+
+  /* Font-size */
+  --fs-p:0.813rem;
+
+  /* Font-weight */
+  --fw-normal: 500;
+  --fw-bold: 600;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+body{
+  font-family:  "Barlow Semi Condensed", serif;
+  background-color: hsl(var(--clr-lightGrayishBlue));
+}
+/* /////////////// */
+/*   Grid-Section */
+/* /////////////// */
+.grid-container{
+  max-width: 1110px;
+  margin-top: 10rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 285px 265px;
+  gap: 1.45rem;
+}
+
+.card-container:nth-child(1){
+  background-color: hsl(var(--clr-moderateViolet));
+  grid-area: 1 / 1 / 2 / 3;
+}
+.card-container:nth-child(2){
+  background-color: hsl(var(--clr-veryDarkGrayishBlue));
+  grid-area: 1 / 3 / 2 / 4;
+}
+.card-container:nth-child(3){
+  background-color: white;
+  grid-area: 2 / 1 / 3 / 2;
+}
+.card-container:nth-child(4){
+  background-color: hsl(var(--clr-veryDarkBlackishBlue));
+  grid-area: 2 / 2 / 3 / 4;
+
+}
+.card-container:nth-child(5){
+  background-color: white;
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+/* /////////////// */
+/*   Card-Section */
+/* /////////////// */
+
+.card-container{
+  padding:1.8rem 2rem;
+  border-radius: 8px;
+  box-shadow: 25px 50px 55px -45px hsl(var(--clr-veryDarkGrayishBlue), 24.74%);
+}
+.profile-container{
+  display: flex;
+  align-items: center;
+  gap: 1rem;  
+  margin-bottom: 1rem;
+}
+.img{
+  height: 28px;
+  border-radius: 50%;
+}
+.card-container:nth-child(3n + 1) .img{
+  height: 32px;
+  border:2px solid #A775F1;
+}
+.name{
+  font-size: .813rem;
+  color: hsl(var(--clr-lightGray));
+}
+.title{
+  font-size: 0.688rem;
+  color: hsl(var(--clr-lightGray),50%);
+}
+.header{
+  font-size: 1.25rem;
+  color: white;
+  line-height: 120%;
+  margin-bottom: 1rem;
+}
+
+.description{
+  font-size: .813rem;
+  line-height: 140%;
+  color: hsl(var(--clr-lightGray),70%);
+}
+/* ////////////////////////////// */
+/*    More defined Card edits */
+/* ////////////////////////////// */
+
+
+.card-container:nth-child(1){
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position:top right 85px;
+}
+.card-container:nth-child(4) .header{
+  margin-bottom: 1.25rem;
+}
+
+/* ////////////////////////////// */
+/*        White-Cards */
+/* ////////////////////////////// */
+
+.card-container:nth-child(2n + 3) .header,
+.card-container:nth-child(2n + 3) .name{
+  color:hsl(var(--clr-veryDarkGrayishBlue));
+  padding-right: 2.1rem;
+}
+.card-container:nth-child(2n + 3) .description {
+  color: hsl(var(--clr-veryDarkGrayishBlue), 70%);
+  margin-top: 1.5rem;
+  
+}
+.card-container:nth-child(2n + 3) .title{
+  color: hsl(var(--clr-veryDarkGrayishBlue), 50%);
+  
+}
+
+/* ////////////////////////////// */
+/*      attribution-Section */
+/* ////////////////////////////// */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* ////////////////////////////// */
+/*         Media queries          */
+/* ////////////////////////////// */
+
+@media (max-width:69.375em) {
+  .grid-container{
+    margin-top: 4.5rem;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+  }
+  .card-container:nth-child(1){
+    background-position: top right 25px;
+  }
+  .card-container:nth-child(1n + 1){
+    grid-area: initial;
+    width: 87%;
+    margin: auto;
+    padding-right: 2.1rem;
+  }
+
+  .card-container:nth-child(2n + 3) .header{
+    padding-right: 0;
+  }
+}
