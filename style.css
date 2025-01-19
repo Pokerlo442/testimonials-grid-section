@@ -143,6 +143,7 @@ body{
 .card-container:nth-child(2n + 3) .header,
 .card-container:nth-child(2n + 3) .name{
   color:hsl(var(--clr-veryDarkGrayishBlue));
+  padding-right: 1rem;
 }
 .card-container:nth-child(2n + 3) .description {
   color: hsl(var(--clr-veryDarkGrayishBlue), 70%);
