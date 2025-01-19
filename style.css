@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf);
+  src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf);
   font-weight: 600;
   font-style: normal;
 }
@@ -128,7 +128,7 @@ body{
 
 
 .card-container:nth-child(1){
-  background-image: url(/images/bg-pattern-quotation.svg);
+  background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position:top right 85px;
 }
