@@ -101,6 +101,9 @@ body{
 .card-container:nth-child(3n + 1){
   padding-right: 1.5rem;
 }
+.card-container:nth-child(3n + 1) .description{
+  padding-right: .5rem;
+}
 .card-container:nth-child(3n + 1) .img{
   height: 32px;
   border:2px solid #A775F1;
